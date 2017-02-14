@@ -1,0 +1,41 @@
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+
+.crawl{
+  position: absolute;
+	width: 18em;
+	height: 50em;
+	bottom: 0;
+	left: 50%;
+	margin-left: -9em;
+	font-size: 300%;
+	font-weight: bold;
+	text-align: justify;
+	overflow: hidden;
+	transform-origin: 50% 100%;
+	transform: perspective(300px) rotateX(25deg);
+
+}
+#crawl:after{
+	position: absolute;
+	content: ' ';
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 60%;
+	background-image: linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
+	pointer-events: none;
+}
+h4{
+  color:#fbf512;
+  font-family: "Droid Sans", arial, verdana, sans-serif;
+  position:relative;
+  width:80%;
+  margin:5% auto;
+  font-size:1.5em;
+  animation:scroll-up-to-transparent 10s linear infinite;
+  z-index:1;
+}
+@keyframes scroll-up-to-transparent{
+  from {top:80vh; opacity:1.0}
+  to {top:-80vh; opacity: 0.5; transform: rotate3d(0,0,40deg);}
+}
