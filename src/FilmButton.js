@@ -14,6 +14,15 @@ class FilmButton extends Component{
       this._sendCrawl(crawl);
     })
   }
+
+  componentDidUpdate() {
+
+  }
+
+  componentDidMount() {
+
+  }
+
   _sendCrawl(crawl){
     this.props.sendCrawl(crawl);
   }
