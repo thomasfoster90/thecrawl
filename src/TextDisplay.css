@@ -15,7 +15,6 @@
 	transform: perspective(300px) rotateX(25deg);
   animation:scroll-up-to-transparent 10s linear infinite;
   z-index:1;
-
 }
 #crawl:after{
 	position: absolute;
