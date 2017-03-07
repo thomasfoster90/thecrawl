@@ -12,6 +12,7 @@ class FilmButton extends Component{
     axios.get(`http://swapi.co/api/films/${this.props.filmID}`).then((response) => {
       var crawl = response.data.opening_crawl
       this._sendCrawl(crawl);
+      console.log(Date())
     })
   }
   _sendCrawl(crawl){

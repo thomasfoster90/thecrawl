@@ -13,8 +13,9 @@
 	overflow: hidden;
 	transform-origin: 50% 100%;
 	transform: perspective(300px) rotateX(25deg);
-  animation:scroll-up-to-transparent 10s linear infinite;
+  animation:scroll-up-to-transparent 15s linear infinite;
   z-index:1;
+  /*height:100%;*/
 }
 #crawl:after{
 	position: absolute;
@@ -27,18 +28,21 @@
 	pointer-events: none;
 }
 
-
-
 h4{
   color:#fbf512;
   font-family: "Droid Sans", arial, verdana, sans-serif;
-  position:relative;
-  width:80%;
-  margin:5% auto;
-  font-size:1.5em;
+  margin: 35% auto;
+  /*position:relative;*/
+  /*width:100%;*/
+  /*font-size:1.5em;*/
 
 }
 @keyframes scroll-up-to-transparent{
-  from {top:150%; opacity:1.0}
-  to {top:-0; opacity: 0.5; transform: rotate3d(0,0,40deg);}
+  0% {top:100%; opacity:1.0}
+  90% { opacity: 1.0}
+  100% {
+    top:-100%;
+    transform: rotate3d(0,0,40deg);
+    opacity: 0;
+  }
 }
